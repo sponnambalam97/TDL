@@ -5,6 +5,9 @@ import { SectionWave } from "@/components/SectionWave";
 import { FeatureCard } from "@/components/FeatureCard";
 import { BookOpen, Rocket, GraduationCap, Users } from "lucide-react";
 import { Testimonials } from "@/components/Testimonials";
+import { HeroIllustration } from "@/components/HeroIllustration";
+import { LogoStrip } from "@/components/LogoStrip";
+import { CTABand } from "@/components/CTABand";
 
 export default function Home() {
   return (
@@ -41,11 +44,12 @@ export default function Home() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ scale: 0.95, opacity: 0 }}
+            initial={{ scale: 0.98, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="aspect-square w-full rounded-3xl bg-gradient-to-tr from-blue-300 via-purple-300 to-sky-300 shadow-soft"
-          />
+          >
+            <HeroIllustration />
+          </motion.div>
         </div>
       </section>
       <SectionWave />
@@ -68,6 +72,8 @@ export default function Home() {
         </div>
       </section>
 
+      <LogoStrip />
+
       <section className="mx-auto max-w-6xl px-4 pb-20">
         <motion.h2
           initial={{ y: 20, opacity: 0 }}
@@ -80,6 +86,8 @@ export default function Home() {
         </motion.h2>
         <Testimonials />
       </section>
+
+      <CTABand />
     </main>
   );
 }
