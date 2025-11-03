@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 // Requires env vars: GOOGLE_PLACES_API_KEY and GOOGLE_PLACE_ID
 export async function GET() {
   const key = process.env.GOOGLE_PLACES_API_KEY;
-  const placeId = process.env.GOOGLE_PLACE_ID;
+  const placeId = process.env.GOOGLE_PLACE_ID || "2746717506473676146"; // fallback from user
   if (!key || !placeId) {
     return NextResponse.json(
       { error: "Missing GOOGLE_PLACES_API_KEY or GOOGLE_PLACE_ID" },

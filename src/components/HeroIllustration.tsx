@@ -5,7 +5,7 @@ export function HeroIllustration() {
     <div className="relative grid aspect-square w-full grid-cols-2 gap-3 overflow-hidden rounded-3xl">
       <div className="relative col-span-2 row-span-1 overflow-hidden rounded-2xl">
         <Image
-          src="https://images.unsplash.com/photo-1596495578065-8fe3faad6627?q=80&w=1200&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1596495578065-8fe3faad6627?q=80&w=1200&auto=format&fit=crop&v=2"
           alt="Students learning with laptops"
           fill
           className="object-cover"
@@ -14,7 +14,7 @@ export function HeroIllustration() {
       </div>
       <div className="relative overflow-hidden rounded-2xl">
         <Image
-          src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop&v=2"
           alt="Books and studying"
           fill
           className="object-cover"
@@ -22,7 +22,7 @@ export function HeroIllustration() {
       </div>
       <div className="relative overflow-hidden rounded-2xl">
         <Image
-          src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?q=80&w=800&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?q=80&w=800&auto=format&fit=crop&v=2"
           alt="Happy student"
           fill
           className="object-cover"
