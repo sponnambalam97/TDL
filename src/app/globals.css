@@ -2,25 +2,51 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a; /* slate-900 */
+  --brand: #e84393; /* primary pink */
+  --font-display: var(--font-geist-sans);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-500: var(--brand);
+  --font-sans: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Light-only for now to keep things vibrant */
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-display), system-ui, -apple-system, Segoe UI, Roboto,
+    Ubuntu, Cantarell, Noto Sans, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #ffe4ed 0%, transparent 60%),
+    radial-gradient(1000px 500px at 100% 0%, #e0f2fe 0%, transparent 60%),
+    #ffffff;
+  text-rendering: optimizeLegibility;
+}
+
+/* Simple utility-like classes */
+.btn-primary {
+  background: var(--brand);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 30px -10px rgba(232, 67, 147, 0.35);
+}
+.btn-primary:hover { filter: brightness(0.95); }
+
+.btn-secondary {
+  border: 1px solid rgb(212 212 216); /* zinc-300 */
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgb(228 228 231); /* zinc-200 */
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }

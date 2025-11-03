@@ -25,7 +25,7 @@ export default function ServicesPage() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: i * 0.05 }}
-            className="rounded-2xl border border-zinc-200 p-6"
+            className="card"
           >
             <h3 className="text-lg font-semibold">{s.title}</h3>
             <p className="mt-2 text-zinc-700">{s.desc}</p>

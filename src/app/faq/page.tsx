@@ -28,11 +28,11 @@ export default function FAQPage() {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">
       <h1 className="mb-6 text-3xl font-bold">Frequently Asked Questions</h1>
-      <Accordion.Root type="single" collapsible className="divide-y divide-zinc-200 rounded-2xl border border-zinc-200 bg-white">
+      <Accordion.Root type="single" collapsible className="rounded-2xl border border-zinc-200 bg-white/90 backdrop-blur">
         {faqs.map((item, idx) => (
           <Accordion.Item key={idx} value={`item-${idx}`}>
             <Accordion.Header>
-              <Accordion.Trigger className="flex w-full items-center justify-between px-6 py-4 text-left text-lg font-medium hover:bg-zinc-50">
+              <Accordion.Trigger className="flex w-full items-center justify-between px-6 py-4 text-left text-lg font-medium hover:bg-zinc-50 border-b border-zinc-100">
                 {item.q}
               </Accordion.Trigger>
             </Accordion.Header>

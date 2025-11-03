@@ -1,10 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
+import { BackgroundOrbs } from "@/components/BackgroundOrbs";
 
 export default function Home() {
   return (
     <main>
-      <section className="relative overflow-hidden bg-gradient-to-b from-pink-50 via-white to-white">
+      <section className="relative overflow-hidden">
+        <BackgroundOrbs />
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 pt-16 md:grid-cols-2 md:gap-16 md:pt-24">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -20,25 +22,25 @@ export default function Home() {
               a modern online classroom designed for success.
             </p>
             <div className="flex gap-3">
-              <a href="/services" className="rounded-full bg-zinc-900 px-5 py-3 text-white hover:bg-zinc-800">
+              <a href="/services" className="btn-primary">
                 Get Started
               </a>
-              <a href="/faq" className="rounded-full border border-zinc-300 px-5 py-3 hover:bg-zinc-50">
+              <a href="/faq" className="btn-secondary">
                 How it works
               </a>
             </div>
             <div className="mt-4 grid grid-cols-2 gap-4 text-sm text-zinc-700 md:grid-cols-4">
-              <div className="rounded-xl border border-zinc-200 p-4">10+ Years Experience</div>
-              <div className="rounded-xl border border-zinc-200 p-4">95% Pass Rate</div>
-              <div className="rounded-xl border border-zinc-200 p-4">Small Group Support</div>
-              <div className="rounded-xl border border-zinc-200 p-4">Expert Tutors</div>
+              <div className="card">10+ Years Experience</div>
+              <div className="card">95% Pass Rate</div>
+              <div className="card">Small Group Support</div>
+              <div className="card">Expert Tutors</div>
             </div>
           </motion.div>
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="aspect-square w-full rounded-3xl bg-gradient-to-tr from-fuchsia-200 via-indigo-200 to-sky-200"
+            className="aspect-square w-full rounded-3xl bg-gradient-to-tr from-pink-300 via-purple-300 to-sky-300 shadow-soft"
           />
         </div>
       </section>
@@ -65,7 +67,7 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="rounded-2xl border border-zinc-200 p-6"
+              className="card"
             >
               <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
               <ul className="list-inside list-disc text-zinc-700">
