@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -26,11 +27,17 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <Link href="/" className="text-xl font-bold text-zinc-900">
-          <span className="text-pink-500">●</span>
-          <span className="text-purple-500">●</span>
-          <span className="text-sky-500">●</span>
-          <span className="ml-2">Three Dots Learning</span>
+        <Link href="/" className="flex items-center gap-2 text-xl font-bold text-zinc-900">
+          <div className="relative h-7 w-[160px]">
+            <Image
+              src="/logo.png"
+              alt="Three Dots Learning"
+              fill
+              className="object-contain"
+              sizes="160px"
+              priority
+            />
+          </div>
         </Link>
         <button aria-label="Toggle menu" className="md:hidden rounded-md border border-zinc-300 px-3 py-2" onClick={() => setOpen((v) => !v)}>Menu</button>
         <div className="hidden items-center gap-6 text-sm md:flex">
