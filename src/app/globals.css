@@ -28,6 +28,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Responsive, legible headings */
+h1 { font-size: clamp(2rem, 1.2rem + 2.5vw, 3rem); line-height: 1.1; }
+h2 { font-size: clamp(1.5rem, 1rem + 1.2vw, 2rem); line-height: 1.2; }
+
+/* High-contrast, keyboard-visible focus styles */
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+
 /* Simple utility-like classes */
 .btn-primary {
   background: var(--brand);
@@ -37,11 +44,13 @@ body {
   box-shadow: 0 12px 30px -12px rgba(124, 140, 247, 0.45);
 }
 .btn-primary:hover { filter: brightness(0.95); }
+.btn-primary:active { transform: translateY(1px); }
 
 .btn-secondary {
   border: 1px solid rgb(212 212 216); /* zinc-300 */
   padding: 0.75rem 1.25rem;
   border-radius: 9999px;
+  background: white;
 }
 
 .card {
@@ -52,3 +61,6 @@ body {
   backdrop-filter: blur(8px);
   box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
+
+/* Better text wrapping */
+.text-balance { text-wrap: balance; }

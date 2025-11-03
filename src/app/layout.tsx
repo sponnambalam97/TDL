@@ -33,8 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${geistMono.variable} antialiased bg-white text-zinc-900`}>
+        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:shadow">Skip to content</a>
         <Nav />
-        <div className="pt-16 min-h-[calc(100vh-200px)]">{children}</div>
+        <div id="main" className="pt-16 min-h-[calc(100vh-200px)]">{children}</div>
         <Footer />
       </body>
     </html>

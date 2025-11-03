@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 export function Nav() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -31,21 +32,24 @@ export function Nav() {
           <span className="text-sky-500">●</span>
           <span className="ml-2">Three Dots Learning</span>
         </Link>
-        <div className="flex items-center gap-6 text-sm">
-          <Link href="/services" className={`hover:text-zinc-900 ${pathname === "/services" ? "text-zinc-900" : "text-zinc-700"}`}>
-            Services
-          </Link>
-          <Link href="/faq" className={`hover:text-zinc-900 ${pathname === "/faq" ? "text-zinc-900" : "text-zinc-700"}`}>
-            FAQ
-          </Link>
-          <Link href="/contact" className={`hover:text-zinc-900 ${pathname === "/contact" ? "text-zinc-900" : "text-zinc-700"}`}>
-            Contact
-          </Link>
-          <Link href="/signin" className="btn-primary px-4 py-2">
-            Log in
-          </Link>
+        <button aria-label="Toggle menu" className="md:hidden rounded-md border border-zinc-300 px-3 py-2" onClick={() => setOpen((v) => !v)}>Menu</button>
+        <div className="hidden items-center gap-6 text-sm md:flex">
+          <Link href="/services" className={`hover:text-zinc-900 ${pathname === "/services" ? "text-zinc-900" : "text-zinc-700"}`}>Services</Link>
+          <Link href="/faq" className={`hover:text-zinc-900 ${pathname === "/faq" ? "text-zinc-900" : "text-zinc-700"}`}>FAQ</Link>
+          <Link href="/contact" className={`hover:text-zinc-900 ${pathname === "/contact" ? "text-zinc-900" : "text-zinc-700"}`}>Contact</Link>
+          <Link href="/signin" className="btn-primary px-4 py-2">Log in</Link>
         </div>
       </div>
+      {open && (
+        <div className="mx-auto max-w-6xl px-4 pb-3 md:hidden">
+          <div className="flex flex-col gap-2 rounded-2xl border border-zinc-200 bg-white p-3">
+            <Link href="/services" className="px-2 py-2" onClick={() => setOpen(false)}>Services</Link>
+            <Link href="/faq" className="px-2 py-2" onClick={() => setOpen(false)}>FAQ</Link>
+            <Link href="/contact" className="px-2 py-2" onClick={() => setOpen(false)}>Contact</Link>
+            <Link href="/signin" className="btn-primary px-4 py-2 text-center" onClick={() => setOpen(false)}>Log in</Link>
+          </div>
+        </div>
+      )}
     </motion.nav>
   );
 }
