@@ -1,6 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import { BackgroundOrbs } from "@/components/BackgroundOrbs";
+import { SectionWave } from "@/components/SectionWave";
+import { FeatureCard } from "@/components/FeatureCard";
+import { BookOpen, Rocket, GraduationCap, Users } from "lucide-react";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -15,11 +19,11 @@ export default function Home() {
             className="flex flex-col gap-5"
           >
             <h1 className="text-4xl font-extrabold leading-tight md:text-5xl">
-              Help Your Child Learn, Grow & Shine
+              Smarter tutoring for ages 6–18
             </h1>
             <p className="text-lg text-zinc-700">
-              Personalised tutoring for ages 6–18. Small groups, expert tutors, and
-              a modern online classroom designed for success.
+              Personalised small-group learning, expert tutors, interactive content, and
+              measurable progress—designed to help every learner shine.
             </p>
             <div className="flex gap-3">
               <a href="/services" className="btn-primary">
@@ -40,10 +44,11 @@ export default function Home() {
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="aspect-square w-full rounded-3xl bg-gradient-to-tr from-pink-300 via-purple-300 to-sky-300 shadow-soft"
+            className="aspect-square w-full rounded-3xl bg-gradient-to-tr from-blue-300 via-purple-300 to-sky-300 shadow-soft"
           />
         </div>
       </section>
+      <SectionWave />
 
       <section className="mx-auto max-w-6xl px-4 py-16">
         <motion.h2
@@ -55,29 +60,25 @@ export default function Home() {
         >
           What We Offer
         </motion.h2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {[
-            { title: "11 Plus Preparation", items: ["Verbal", "Non-Verbal", "Maths", "English"] },
-            { title: "Core Subjects", items: ["English", "Mathematics", "Science"] },
-            { title: "Advanced", items: ["Economics", "Business", "Accounting"] },
-          ].map((card, idx) => (
-            <motion.div
-              key={card.title}
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="card"
-            >
-              <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
-              <ul className="list-inside list-disc text-zinc-700">
-                {card.items.map((i) => (
-                  <li key={i}>{i}</li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
+          <FeatureCard title="Interactive Lessons" description="Engaging content and quizzes to reinforce learning." icon={<BookOpen size={18} />} />
+          <FeatureCard title="Small Groups" description="Personalised attention in cohorts of 4–8 learners." icon={<Users size={18} />} />
+          <FeatureCard title="Expert Tutors" description="Subject specialists with proven track records." icon={<GraduationCap size={18} />} />
+          <FeatureCard title="Real Progress" description="Track mastery and celebrate milestones." icon={<Rocket size={18} />} />
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-20">
+        <motion.h2
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-6 text-2xl font-bold"
+        >
+          What parents say
+        </motion.h2>
+        <Testimonials />
       </section>
     </main>
   );
