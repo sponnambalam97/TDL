@@ -8,6 +8,7 @@ export function HeroIllustration() {
           src="https://images.unsplash.com/photo-1596495578065-8fe3faad6627?q=80&w=1200&auto=format&fit=crop&v=2"
           alt="Students learning with laptops"
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover"
           priority
         />
@@ -17,6 +18,8 @@ export function HeroIllustration() {
           src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop&v=2"
           alt="Books and studying"
           fill
+          sizes="(max-width: 768px) 50vw, 25vw"
+          loading="lazy"
           className="object-cover"
         />
       </div>
@@ -25,6 +28,8 @@ export function HeroIllustration() {
           src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?q=80&w=800&auto=format&fit=crop&v=2"
           alt="Happy student"
           fill
+          sizes="(max-width: 768px) 50vw, 25vw"
+          loading="lazy"
           className="object-cover"
         />
       </div>

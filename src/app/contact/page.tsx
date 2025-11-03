@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Contact",
+  description: "Get in touch for enrolment enquiries and personalised learning plans.",
+};
+
 export default function ContactPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-12">

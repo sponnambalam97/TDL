@@ -17,14 +17,14 @@ export default function Home() {
     <main>
       <section className="relative overflow-hidden">
         <BackgroundOrbs />
-        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 pt-24 md:grid-cols-2 md:gap-20">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 pt-20 md:grid-cols-2 md:gap-20 md:pt-24">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             className="flex flex-col gap-5"
           >
-            <h1 className="text-4xl font-extrabold leading-tight md:text-5xl">
+            <h1 className="text-4xl font-extrabold leading-tight text-zinc-900 text-balance md:text-5xl">
               Smarter tutoring for ages 6–18
             </h1>
             <p className="text-lg text-zinc-700">
@@ -39,7 +39,7 @@ export default function Home() {
                 How it works
               </a>
             </div>
-            <div className="mt-4 grid grid-cols-2 gap-4 text-sm text-zinc-700 md:grid-cols-4">
+            <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-zinc-700 sm:gap-4 md:grid-cols-4">
               <div className="card">10+ Years Experience</div>
               <div className="card">95% Pass Rate</div>
               <div className="card">Small Group Support</div>

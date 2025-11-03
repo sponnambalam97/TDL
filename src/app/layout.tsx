@@ -22,7 +22,24 @@ export const metadata: Metadata = {
   },
   description:
     "A modern, interactive learning platform for ages 6–18 with expert tutors.",
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://tdlnew.vercel.app"),
+  openGraph: {
+    title: "Three Dots Learning",
+    description:
+      "Personalised small-group learning, expert tutors, interactive content, and measurable progress.",
+    url: "https://tdlnew.vercel.app",
+    siteName: "Three Dots Learning",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1596495578065-8fe3faad6627?w=1200&auto=format&fit=crop",
+        width: 1200,
+        height: 630,
+        alt: "Three Dots Learning",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
