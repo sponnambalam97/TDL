@@ -6,11 +6,11 @@ import { FeatureCard } from "@/components/FeatureCard";
 import { BookOpen, Rocket, GraduationCap, Users } from "lucide-react";
 import { Testimonials } from "@/components/Testimonials";
 import { HeroIllustration } from "@/components/HeroIllustration";
-import { LogoStrip } from "@/components/LogoStrip";
 import { CTABand } from "@/components/CTABand";
 import { Parallax } from "@/components/Parallax";
 import { TrustMetrics } from "@/components/TrustMetrics";
 import { ResourcesTeaser } from "@/components/ResourcesTeaser";
+import { GoogleReviews } from "@/components/GoogleReviews";
 
 export default function Home() {
   return (
@@ -77,7 +77,6 @@ export default function Home() {
         </div>
       </section>
 
-      <LogoStrip />
       <TrustMetrics />
 
       <section className="mx-auto max-w-6xl px-4 pb-20">
@@ -94,6 +93,8 @@ export default function Home() {
       </section>
 
       <ResourcesTeaser />
+
+      <GoogleReviews />
 
       <CTABand />
     </main>

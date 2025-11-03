@@ -3,7 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a; /* slate-900 */
-  --brand: #e84393; /* primary pink */
+  --brand: #7c8cf7; /* softer indigo */
+  --brand-2: #f7a7d9; /* soft pink */
+  --brand-3: #9bd6fb; /* soft sky */
   --font-display: var(--font-geist-sans);
 }
 
@@ -20,8 +22,8 @@ body {
   font-family: var(--font-display), system-ui, -apple-system, Segoe UI, Roboto,
     Ubuntu, Cantarell, Noto Sans, sans-serif;
   background:
-    radial-gradient(1200px 600px at 10% -10%, #ffe4ed 0%, transparent 60%),
-    radial-gradient(1000px 500px at 100% 0%, #e0f2fe 0%, transparent 60%),
+    radial-gradient(1200px 600px at 10% -10%, rgba(247, 167, 217, 0.35) 0%, transparent 60%),
+    radial-gradient(1000px 500px at 100% 0%, rgba(155, 214, 251, 0.35) 0%, transparent 60%),
     #ffffff;
   text-rendering: optimizeLegibility;
 }
@@ -32,7 +34,7 @@ body {
   color: white;
   padding: 0.75rem 1.25rem;
   border-radius: 9999px;
-  box-shadow: 0 10px 30px -10px rgba(232, 67, 147, 0.35);
+  box-shadow: 0 12px 30px -12px rgba(124, 140, 247, 0.45);
 }
 .btn-primary:hover { filter: brightness(0.95); }
 
