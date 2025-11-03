@@ -8,13 +8,16 @@ import { Testimonials } from "@/components/Testimonials";
 import { HeroIllustration } from "@/components/HeroIllustration";
 import { LogoStrip } from "@/components/LogoStrip";
 import { CTABand } from "@/components/CTABand";
+import { Parallax } from "@/components/Parallax";
+import { TrustMetrics } from "@/components/TrustMetrics";
+import { ResourcesTeaser } from "@/components/ResourcesTeaser";
 
 export default function Home() {
   return (
     <main>
       <section className="relative overflow-hidden">
         <BackgroundOrbs />
-        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 pt-16 md:grid-cols-2 md:gap-16 md:pt-24">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 pt-24 md:grid-cols-2 md:gap-20">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -48,7 +51,9 @@ export default function Home() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <HeroIllustration />
+            <Parallax speed={-0.05}>
+              <HeroIllustration />
+            </Parallax>
           </motion.div>
         </div>
       </section>
@@ -73,6 +78,7 @@ export default function Home() {
       </section>
 
       <LogoStrip />
+      <TrustMetrics />
 
       <section className="mx-auto max-w-6xl px-4 pb-20">
         <motion.h2
@@ -86,6 +92,8 @@ export default function Home() {
         </motion.h2>
         <Testimonials />
       </section>
+
+      <ResourcesTeaser />
 
       <CTABand />
     </main>
